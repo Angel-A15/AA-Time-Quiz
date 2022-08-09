@@ -62,84 +62,84 @@ countdown();
 
 var questions = [
     {
-        question: "What ?",
-        ansA: " ",
-        ansB: " ",
-        ansC: " ",
-        ansD: " ",
-        crct: " "
+        question: "Which one isn't a type of selector?",
+        ansA: "class",
+        ansB: "id",
+        ansC: "body",
+        ansD: "element",
+        crct: "c"
     },
     {
-        question: "What ?",
-        ansA: " ",
-        ansB: " ",
-        ansC: " ",
-        ansD: " ",
-        crct: " "
+        question: "What should you not do when starting a project?",
+        ansA: "brainstorm",
+        ansB: "make a roughdraft",
+        ansC: "look through past notes",
+        ansD: "have a meltdown",
+        crct: "d"
     },
     {
-        question: "What ?",
-        ansA: " ",
-        ansB: " ",
-        ansC: " ",
-        ansD: " ",
-        crct: " "
+        question: "When was html language invented?",
+        ansA: "1969",
+        ansB: "1921",
+        ansC: "1991",
+        ansD: "1975",
+        crct: "c"
     },
     {
-        question: "What ?",
-        ansA: " ",
-        ansB: " ",
-        ansC: " ",
-        ansD: " ",
-        crct: " "
+        question: "What does HTML stand for?",
+        ansA: "Hyper Tech Markup Language",
+        ansB: "High Tech Mobile Language",
+        ansC: " Hypertext Markup Language",
+        ansD: "Hyper Text Mobile Language",
+        crct: "c"
     },
     {
-        question: "What ?",
-        ansA: " ",
-        ansB: " ",
-        ansC: " ",
-        ansD: " ",
-        crct: " "
+        question: "Which unit of time do we use for JS?",
+        ansA: "Milliseconds",
+        ansB: "Minutes",
+        ansC: "Seconds",
+        ansD: "All of the above",
+        crct: "a"
     },
     {
-        question: "What ?",
-        ansA: " ",
-        ansB: " ",
-        ansC: " ",
-        ansD: " ",
-        crct: " "
+        question: "Who created CSS?",
+        ansA: "George R.R. Martin",
+        ansB: "Echiro Oda",
+        ansC: "Magnus Carter",
+        ansD: "Hakon Wium Lie",
+        crct: "d"
     },
     {
-        question: "What ?",
-        ansA: " ",
-        ansB: " ",
-        ansC: " ",
-        ansD: " ",
-        crct: " "
+        question: "What belongs first when creating HTML codebase?",
+        ansA: "<html>",
+        ansB: "<head>",
+        ansC: "<!DOCTYPE html>",
+        ansD: "An idea",
+        crct: "c"
     },
     {
-        question: "What ?",
-        ansA: " ",
-        ansB: " ",
-        ansC: " ",
-        ansD: " ",
-        crct: " "
+        question: "Which git input command opens vs code from gitbash?",
+        ansA: "node .",
+        ansB: "git vs.code",
+        ansC: "code .",
+        ansD: "git <folder> open",
+        crct: "c"
     },
     {
-        question: "What ?",
-        ansA: " ",
-        ansB: " ",
-        ansC: " ",
-        ansD: " ",
-        crct: " "
+        question: "Who has the most expensive coding boot camp in San Antonio, Tx?",
+        ansA: "UTSA",
+        ansB: "Lamson Institute",
+        ansC: "Codeup",
+        ansD: "B & C",
+        crct: "d"
     },
     {
-        question: "What ?",
-        ansA: " ",
-        ansB: " ",
-        ansC: " ",
-        ansD: " ",
-        crct: " "
+        question: "How many lick does it take to get to the center of a tootsie pop?",
+        ansA: "364",
+        ansB: "421",
+        ansC: "665",
+        ansD: "832",
+        crct: "a"
     },
 ]
 
