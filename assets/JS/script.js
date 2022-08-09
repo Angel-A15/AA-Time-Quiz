@@ -33,7 +33,7 @@ window.onload = function () {
     strtTime(fiveMinutes, display);
 };
 
-//var message = 
+var message
     'The test is over!';
 var words = message;
 
