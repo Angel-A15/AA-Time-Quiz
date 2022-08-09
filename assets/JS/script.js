@@ -5,7 +5,7 @@ var strtBtn =
 //var answerchoise=document.selecter
 //<button class ='answerchouce id = chise-4'> hcice 3
 
-var message = 
+//var message = 
     'The test is over!';
 var words = message;
 
