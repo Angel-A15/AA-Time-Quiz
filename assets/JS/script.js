@@ -1,14 +1,10 @@
 //timer/message
 var timerEl = document.getElementById('countdown');
 var mainEl = document.getElementById('main');
-var strtBtn = 
-//var answerchoise=document.selecter
-//<button class ='answerchouce id = chise-4'> hcice 3
 
-
-//start time btn function//
 function strtTime(duration, display){
-    
+        
+        
     var timer = duration, minutes, seconds;
 
     setInterval(function () {
@@ -24,161 +20,237 @@ function strtTime(duration, display){
             timer=duration;
         }
     }, 1000);
+
+    window.onload = function () {
+        var fiveMinutes = 60 * 5,
+            display = document.querySelector('#time');
+    
+        strtTime(fiveMinutes, display);
+    };
+    //countdown function
+    
+
+    //when timer reaches last 10 sec
+    var message
+        'The test is over!';
+    var words = message;
+    
+    function countdown() {
+        var timeLeft = 10;
+    
+        var timeInterval = setInterval(function () {
+    
+            if (timeLeft > 1 ) {
+                timerEl.textContent = timeLeft + ' seconds remaining';
+                timeLeft--;
+            }
+    
+            else if (timeLeft === 1) {
+                timerEl.textContent = timeLeft + ' second remaining';
+                timeLeft--;
+            }
+    
+            else {
+                timerEl.textContent = '';
+                clearInterval(timeInterval);
+                displayMessage();
+            }
+        }, 1000);
+    }
+    
+    function displayMessage() {
+        var wordCount = 0;
+    
+        var msgInterval = setInterval(function () {
+    
+            if (words === undefined) {
+                clearInterval(msgInterval);
+            } else {
+                // Display one word of the message
+                mainEl.textContent = words;
+                
+              }
+    
+        }, 1000);
+    }
+    
+
 }
 
-window.onload = function () {
-    var fiveMinutes = 60 * 5,
-        display = document.querySelector('#time');
 
-    strtTime(fiveMinutes, display);
-};
+//when timer reaches last 10 seconds
 
-var message
-    'The test is over!';
-var words = message;
-
-function countdown() {
-    var timeLeft = 10;
-
-    var timeInterval = setInterval(function () {
-
-        if (timeLeft > 1 ) {
-            timerEl.textContent = timeLeft + ' seconds remaining';
-            timeLeft--;
-        }
-
-        else if (timeLeft === 1) {
-            timerEl.textContent = timeLeft + ' second remaining';
-            timeLeft--;
-        }
-
-        else {
-            timerEl.textContent = '';
-            clearInterval(timeInterval);
-            displayMessage();
-        }
-    }, 1000);
-}
-
-function displayMessage() {
-    var wordCount = 0;
-
-    var msgInterval = setInterval(function () {
-
-        if (words === undefined) {
-            clearInterval(msgInterval);
-        } else {
-            // Display one word of the message
-            mainEl.textContent = words;
-            
-          }
-
-    }, 1000);
-}
-
-countdown();
-
-//<p id="demo"></p>
-
-//timer/message
-
-//questions/answers
-//were going to use dataquerys for variables
-//var amserA = documrny.get element by id (' andwera')
-//var quesIndex = questions.length-1;
-//var for
-
+//quuesitons/answers
 var questions = [
     {
         question: "Which one isn't a type of selector?",
-        ansA: "class",
-        ansB: "id",
-        ansC: "body",
-        ansD: "element",
-        crct: "c"
+        answers: {
+            a:"class",
+            b: "id",
+            c: "body",
+            d: "element",
+        },
+        crctA: "c"
     },
     {
         question: "What should you not do when starting a project?",
-        ansA: "brainstorm",
-        ansB: "make a roughdraft",
-        ansC: "look through past notes",
-        ansD: "have a meltdown",
-        crct: "d"
+        answers: {
+        a: "brainstorm",
+        b: "make a roughdraft",
+        c: "look through past notes",
+        d: "have a meltdown",
+        },
+        crctA: "d"
     },
     {
         question: "When was html language invented?",
-        ansA: "1969",
-        ansB: "1921",
-        ansC: "1991",
-        ansD: "1975",
-        crct: "c"
+        answers: {
+        a: "1969",
+        b: "1921",
+        c: "1991",
+        d: "1975",
+        },
+        crctA: "c"
     },
     {
         question: "What does HTML stand for?",
-        ansA: "Hyper Tech Markup Language",
-        ansB: "High Tech Mobile Language",
-        ansC: " Hypertext Markup Language",
-        ansD: "Hyper Text Mobile Language",
-        crct: "c"
+        answers: {
+        a: "Hyper Tech Markup Language",
+        b: "High Tech Mobile Language",
+        c: " Hypertext Markup Language",
+        d: "Hyper Text Mobile Language",
+        },
+        crctA: "c"
     },
     {
         question: "Which unit of time do we use for JS?",
-        ansA: "Milliseconds",
-        ansB: "Minutes",
-        ansC: "Seconds",
-        ansD: "All of the above",
-        crct: "a"
+        answers: {
+        a: "Milliseconds",
+        b: "Minutes",
+        c: "Seconds",
+        d: "All of the above",
+        },
+        crctA: "a"
     },
     {
         question: "Who created CSS?",
-        ansA: "George R.R. Martin",
-        ansB: "Echiro Oda",
-        ansC: "Magnus Carter",
-        ansD: "Hakon Wium Lie",
-        crct: "d"
+        answers: {
+        a: "George R.R. Martin",
+        b: "Echiro Oda",
+        c: "Magnus Carter",
+        d: "Hakon Wium Lie",
+        },
+        crctA: "d"
     },
     {
         question: "What belongs first when creating HTML codebase?",
-        ansA: "<html>",
-        ansB: "<head>",
-        ansC: "<!DOCTYPE html>",
-        ansD: "An idea",
-        crct: "c"
+        answers: {
+        a: "<html>",
+        b: "<head>",
+        c: "<!DOCTYPE html>",
+        d: "An idea",
+        },
+        crctA: "c"
     },
     {
         question: "Which git input command opens vs code from gitbash?",
-        ansA: "node .",
-        ansB: "git vs.code",
-        ansC: "code .",
-        ansD: "git <folder> open",
-        crct: "c"
+        answers: {
+        a: "node .",
+        b: "git vs.code",
+        c: "code .",
+        d: "git <folder> open",
+        },
+        crctA: "c"
     },
     {
         question: "Who has the most expensive coding boot camp in San Antonio, Tx?",
-        ansA: "UTSA",
-        ansB: "Lamson Institute",
-        ansC: "Codeup",
-        ansD: "B & C",
-        crct: "d"
+        answers: {
+        a: "UTSA",
+        b: "Lamson Institute",
+        c: "Codeup",
+        d: "B & C",
+        },
+        crctA: "d"
     },
     {
         question: "How many lick does it take to get to the center of a tootsie pop?",
-        ansA: "364",
-        ansB: "421",
-        ansC: "665",
-        ansD: "832",
-        crct: "a"
+        answers: {
+        a: "364",
+        b: "421",
+        c: "665",
+        d: "832",
+        },
+        crctA: "a"
     },
 ]
+//quuesitons/answers
+var quizContainer = document.getElementById('quiz');
+
+
+function quiz(){
+
+    var output = [];
+
+    questions.forEach(
+        (currentQuestion, questionNumber) => {
+
+            var answers = [];
+
+            for (letter in currentQuestion.answers){
+
+                answers.push(
+                    `<label>
+                    <input type="radio" name="question${questionNumber}" value="${letter}">
+                    </label>`
+                );
+            }
+
+            output.push(
+                `<div class="question"> ${currentQuestion.question} </div>
+                <div class="answers"> ${answers.join('')} </div>`
+            );
+        }
+    );
+
+    quizContainer.innerHTML = output.join('');
+}
+
+questions.forEach( (currentQuestion, questionNumber) => {
+    var answers = [];
+
+    for(letter in currentQuestion.answers) {
+
+        answers.push (
+            `<label>
+                <input type="radio" name="questions${questionNumber}" value = "${letter}">
+                ${letter} :
+                ${currentQuestion.answers[letter]}
+            </label>`
+        );
+    }
+
+    `<div class="question"> ${currentQuestion.question} </div>
+    <div class="answers"> ${answers.join('')}</div>`
+});
+
+
 
 //start button
 var startEl = document.querySelector('#strt');
 
-startEl.addEventListener('click', function(){
-    questions;
-    console.log(questions);
+    startEl.addEventListener('click', function(){
+        questions;
+        console.log(questions);
+
+        //countdown function//
+
+
+    
 
 });
+//start button
+
+
 /*function strtBtn() {
     questions();
 }
@@ -202,3 +274,15 @@ startEl.addEventListener('click', function(){
 //var currentquestin = 0;\fucntion updatequestion() {
 //    choice1El.textContent = questions[currentquestion].answers
 //}
+
+
+
+//<p id="demo"></p>
+
+//timer/message
+
+//questions/answers
+//were going to use dataquerys for variables
+//var amserA = documrny.get element by id (' andwera')
+//var quesIndex = questions.length-1;
+//var for
