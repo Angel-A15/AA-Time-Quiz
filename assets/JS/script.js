@@ -29,17 +29,18 @@ function strtTime(duration, display){
        
 }
 
+//starts the quiz
 function startQuiz(){
     startButton.setAttribute("class", "hidden")
     strtTime();
 }
 
-
+//will end quiz
 function endQuiz() {
     startQuiz();
 }
 
-
+//will start the timer once the start button is clicked
 startButton.onclick = function () {
     
     var twoMinutes = 60 * 2,
@@ -52,6 +53,7 @@ startButton.onclick = function () {
 
 };
 
+//will start the quiz on event listener
 startButton.addEventListener('click', startQuiz())
  
 
@@ -102,6 +104,7 @@ function renderQuestion(data) {
     }
 }
 
+//will check answers for correct one
 function checkAnswers(){
     answersDiv.innerHTML = "";
     liCreate.innerHTML = "";
