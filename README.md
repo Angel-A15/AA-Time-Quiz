@@ -18,6 +18,9 @@ will subtract time
 
 ## Preview of Webpage
 
+![Web capture_10-8-2022_231318_angel-a15 github io](https://user-images.githubusercontent.com/106582411/184063714-37d850be-52f1-435e-b0e1-74d269a061c0.jpeg)
 
 
 ## Link to Webpage 
+
+https://angel-a15.github.io/Time-Wizards-Quiz/
