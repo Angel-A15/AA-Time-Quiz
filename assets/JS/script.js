@@ -1,4 +1,3 @@
-//timer/message
 var startButton = document.querySelector('#strt');
 var timerEl = document.getElementById('countdown');
 var mainEl = document.getElementById('main');
@@ -23,74 +22,38 @@ function strtTime(duration, display){
         if (--timer < 0) {
             timer=duration;
         }
+        else if (--timer === 0) {
+            clearIntertal;
+        }
     }, 1000);
        
 }
 
-window.onload = function () {
+function startQuiz(){
+    startButton.setAttribute("class", "hidden")
+    strtTime();
+}
+
+
+function endQuiz() {
+    startQuiz();
+}
+
+
+startButton.onclick = function () {
     
-    var fiveMinutes = 60 * 2,
+    var twoMinutes = 60 * 2,
         display = document.querySelector('#time');
     
-    strtTime(fiveMinutes, display);
-    
-    
+    strtTime(twoMinutes, display);
+    if(--timer === 0) {
+      endQuiz;
+    };
+
 };
 
-function countdown() {
-
-
-    //sets event at 10 secs
-    var message
-        'The test is over!';
-    var words = message;
-
-
-    var timeLeft = 10;
-
-    var timeInterval = setInterval(function () {
-
-        if (timeLeft > 1 ) {
-            timerEl.textContent = timeLeft + ' seconds remaining';
-            timeLeft--;
-        }
-
-        else if (timeLeft === 1) {
-            timerEl.textContent = timeLeft + ' second remaining';
-            timeLeft--;
-        }
-
-        else {
-            timerEl.textContent = '';
-            clearInterval(timeInterval);
-            displayMessage();
-        }
-    }, 1000);
-
-
-}
-//countdown timer function
-
-
-//when timer reaches last 10 sec
-function displayMessage() {
-var wordCount = 0;
-
-var msgInterval = setInterval(function () {
-
-    if (words === undefined) {
-        clearInterval(msgInterval);
-    } else {
-        // Display one word of the message
-        mainEl.textContent = words;
-        
-      }
-
-}, 1000);
-}
-//when timer reaches last 10 seconds
-
-
+startButton.addEventListener('click', startQuiz())
+ 
 
 
 //quesitons/answers variable
@@ -123,33 +86,7 @@ var questions = [
         ],
         crctA: "c"
     },
-    {
-        question: "Which unit of time do we use for JS?",
-        answers: [
-            "Milliseconds", "Minutes", "Seconds", "All of the above",
-        ],
-        crctA: "a"
-    },
-    {
-        question: "Who created CSS?",
-        answers: ["George R.R. Martin","Echiro Oda","Magnus Carter","Hakon Wium Lie",
-        ],
-        crctA: "d"
-    },
-    {
-        question: "Which git input command opens vs code from gitbash?",
-        answers:[
-            "node .", "git vs.code", "code .", "git <folder> open",
-        ],
-        crctA: "c"
-    },
-    {
-        question: "Who has the most expensive coding boot camp in San Antonio, Tx?",
-        answers: [
-            "UTSA", "Lamson Institute", "Codeup", "B & C",
-        ],
-        crctA: "d"
-    },
+
 ]
 //questions/answers variable
 
@@ -176,11 +113,3 @@ function checkAnswers(){
 //question/answer loop function
 
 
-
-function startQuiz(){
-    startButton.setAttribute("class", "hidden")
-    strtTime();
-}
-
-startButton.addEventListener('click', startQuiz())
- 
